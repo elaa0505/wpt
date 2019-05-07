@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html style="-webkit-writing-mode:vertical-lr">
+<meta charset="utf-8">
+<title>min-width: Should apply to buttons, vertical writing mode</title>
+<link rel="author" title="Mason Freed" href="mailto:masonfreed@chromium.org">
+
+
+
+<div>
+  <p>Expected: Two buttons, each with width=200px</p>
+</div>
+
+<div class="button-row">
+    <button>Foo</button>
+    <button>Bar</button>
+</div>
+
+<style>
+.button-row {
+  background-color: #BBB;
+  display: flex;
+  flex-direction: column;
+  width: 416px;
+}
+button {
+  flex: 0 0 auto;
+  margin: 4px;
+  width: 200px;
+}
+</style>

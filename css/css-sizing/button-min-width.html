@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<title>min-width: Should apply to buttons</title>
+<link rel="author" title="Mason Freed" href="mailto:masonfreed@chromium.org">
+<link rel="help" href="https://www.w3.org/TR/CSS2/visudet.html#min-max-widths">
+<link rel="match" href="button-min-width-ref.html">
+
+<div>
+  <p>Expected: Two buttons, each with width=200px</p>
+</div>
+
+<div class="button-row">
+    <button>Foo</button>
+    <button>Bar</button>
+</div>
+
+<style>
+.button-row {
+  background-color: #BBB;
+  display: flex;
+  flex-direction: row;
+  width: 416px;
+}
+button {
+  flex: 0 0 auto;
+  margin: 4px;
+  min-width: 200px;
+}
+</style>
